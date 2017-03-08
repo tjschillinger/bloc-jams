@@ -36,6 +36,11 @@ html {
      text-decoration: none;
 }
 
+.logo-container a:hover{
+    font-size: 18px;
+    color: rgb(233,50,117);
+}
+
 .logo-link{
     display: table-cell;
      position: relative;
@@ -93,7 +98,6 @@ html {
      /* #3 */
      text-decoration: none;
      cursor: pointer;
-
     text-shadow: 1px 1px 0px rgb(58,23,63);
 }
 
@@ -102,6 +106,7 @@ html {
 }
  .main-page-links-container .main-page-navbar-link:hover {
      color: rgb(233,50,117);
+     font-size: 14px;
  }
 
 .main-page-navbar-link:active{
