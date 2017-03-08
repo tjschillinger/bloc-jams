@@ -38,7 +38,6 @@ var setSong = function(songNumber) {
     currentlyPlayingSongNumber = parseInt(songNumber);
     currentSongFromAlbum = currentAlbum.songs[songNumber - 1];
     currentSoundFile = new buzz.sound(currentSongFromAlbum.audioUrl, {
-         // #2
          formats: [ 'mp3' ],
          preload: true
      });
@@ -154,9 +153,9 @@ var setCurrentAlbum = function(album) {
 
  var updateSeekBarWhileSongPlays = function() {
      if (currentSoundFile) {
-         // #10
+         
          currentSoundFile.bind('timeupdate', function(event) {
-             // #11
+            
              var seekBarFillRatio = this.getTime() / this.getDuration();
              var $seekBar = $('.seek-control .seek-bar');
              setCurrentTimeInPlayerBar(filterTimeCode(this.getTime()));
@@ -168,11 +167,9 @@ var setCurrentAlbum = function(album) {
 
 var updateSeekPercentage = function($seekBar, seekBarFillRatio) {
     var offsetXPercent = seekBarFillRatio * 100;
-    // #1
     offsetXPercent = Math.max(0, offsetXPercent);
     offsetXPercent = Math.min(100, offsetXPercent);
 
-    // #2
     var percentageString = offsetXPercent + '%';
     $seekBar.find('.fill').width(percentageString);
     $seekBar.find('.thumb').css({left: percentageString});
@@ -241,7 +238,7 @@ var nextSong = function() {
     };
 
     var currentSongIndex = trackIndex(currentAlbum, currentSongFromAlbum);
-    // Note that we're _incrementing_ the song here
+    
     currentSongIndex++;
 
     if (currentSongIndex >= currentAlbum.songs.length) {
@@ -271,14 +268,11 @@ var nextSong = function() {
 
 var previousSong = function() {
 
-    // Note the difference between this implementation and the one in
-    // nextSong()
     var getLastSongNumber = function(index) {
         return index == (currentAlbum.songs.length - 1) ? 1 : index + 2;
     };
 
     var currentSongIndex = trackIndex(currentAlbum, currentSongFromAlbum);
-    // Note that we're _decrementing_ the index here
     currentSongIndex--;
 
     if (currentSongIndex < 0) {
