@@ -1,77 +1,60 @@
 body.landing {
-     background-color: rgba(239,210,160, .1);
- }
- 
-
-
- .hero-content {
-     position: relative;
-     min-height: 600px;
-     background-image: url(../assets/images/d58cacc1c1bdb4c1183bd5612d995411.jpg);
-     background-repeat: no-repeat;
-     background-position: center center;
-     background-size: cover;
-     
- }
-
- .hero-content .hero-title {
-     position: absolute;
-     top: 40%;
-     -webkit-transform: translateY(-50%);
-     -moz-transform: translateY(-50%);
-     transform: translateY(-50%);
-     width: 100%;
-     text-align: center;
-     font-size: 4rem;
-     font-weight: 300;
-     text-transform: uppercase;
-     letter-spacing: 0.5rem;
-     text-shadow: 1px 1px 0px rgb(58,23,63);
- }
- 
-.hero-subtitle {
-     position: absolute;
-     top: 60%;
-     -webkit-transform: translateY(-50%);
-     -moz-transform: translateY(-50%);
-     transform: translateY(-50%);
-     width: 100%;
-     text-align: center;
-     font-size: 2 rem;
-     font-weight: 300;
-     text-transform: uppercase;
-     letter-spacing: 0.25rem;
-     text-shadow: .5px .5px 0px rgb(58,23,63);
- }
-
- .selling-points {
-     position: relative;
-     color: black;
+    background-color: white;
 }
- 
- .point { 
-     position: relative;
-     padding: 2rem;
-     text-align: center;
-     opacity: 0;
-     -webkit-transform: scaleX(0.9) translateY(3rem);
-     -moz-transform: scaleX(0.9) translateY(3rem);
-     transform: scaleX(0.9) translateY(3rem);
-     -webkit-transition: all 0.25s ease-in-out;
-     -moz-transition: all 0.25s ease-in-out;
-     transition: all 0.25s ease-in-out;
-     -webkit-transition-delay: 0.2s;
-     -moz-transition-delay: 0.2s;
-     transition-delay: 0.2s;
- }
- 
- .point .point-title {
-     font-size: 1.25rem;
- }
- 
- .ion-music-note,
- .ion-radio-waves,
- .ion-iphone {
-     color: rgb(235,107,43);
-     font-size: 5rem;
- }
+
+.hero-content {
+    position: relative;
+    min-height: 600px;
+    background-image: url(../assets/images/headphones-beats-pink-wallpaper-1-1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.hero-content .hero-title {
+    position: absolute;
+    top: 70%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: right;
+    padding-right: 7%;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    text-shadow: 1px 1px 0px rgb(58,23,63);
+}
+
+.selling-points {
+    position: relative;
+}
+
+.point {
+    color: black;
+    position: relative;
+    padding: 2rem;
+    text-align: center;
+    opacity: 0;
+    -webkit-transform: scaleX(0.9) translateY(3rem);
+    -moz-transform: scaleX(0.9) translateY(3rem);
+    transform: scaleX(0.9) translateY(3rem);
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    -webkit-transition-delay: 0.2s;
+    -moz-transition-delay: 0.2s;
+    transition-delay: 0.2s;
+}
+
+.point .point-title {
+    font-size: 1.25rem;
+}
+
+.ion-music-note,
+.ion-radio-waves,
+.ion-iphone {
+    color: #F99186;
+    font-size: 5rem;
+}

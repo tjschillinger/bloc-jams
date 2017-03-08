@@ -4,57 +4,77 @@
      box-sizing: border-box;
  }
 html {
-     height: 100%; /* makes sure our HTML takes up 100% of the browser window */
+     height: 100%;
      font-size: 100%;
  }
- 
+
  body {
-     font-family: 'Open Sans'; /* sets our font to the "Open Sans" typeface */
-     color: white;             /* sets the text color to white */
-     min-height: 100%;         /* says the height of the body must be, at minimum, 100% of the window */
- }
- 
- .navbar {
-    position: relative;
-     padding: 0.5rem;
-          /* #1 */
-     background-color: rgba(236,132,92, .7);
-     /* #2 */
-     z-index: 1;
-
-}
-
-.navbar .logo {
-    position: relative;
-    left: 2rem;
-    cursor: pointer;  /* produces the finger-pointer icon when you hover over the logo */
- }
- 
- .navbar .links-container {
-     display: table;
-     position: absolute;
-     top: 0;
-     right: 0;
-     height: 100px;
+     font-family: 'Open Sans';
      color: white;
-     /* #3 */
-     text-decoration: none;
+     min-height: 100%;
  }
- 
- .links-container .navbar-link {
+
+.logo {
      display: table-cell;
      position: relative;
      height: 100%;
-     padding-left: 1rem;
+     vertical-align: middle;
+    
+ }
+
+.logo img{
+    width: 50px;
+}
+
+.logo-container{
+    display: table;
+     position: absolute;
+     top: 0;
+     left: 2%;
+     height: 70px;
+     color: white;
+     text-decoration: none;
+}
+
+.logo-link{
+    display: table-cell;
+     position: relative;
+     height: 100%;
+     padding-left: 5%;
      padding-right: 1rem;
-     /* #4 */
      vertical-align: middle;
      color: white;
      font-size: 0.625rem;
      letter-spacing: 0.05rem;
      font-weight: 700;
      text-transform: uppercase;
-     /* #3 */
+     text-decoration: none;
+     cursor: pointer;
+    font-size: 14px;
+}
+
+.main-page-links-container {
+     display: table;
+     position: absolute;
+     top: 0;
+     right: 0;
+     height: 100px;
+     color: white;
+     text-decoration: none;
+ }
+
+ .main-page-links-container .main-page-navbar-link {
+     display: table-cell;
+     position: relative;
+     height: 100%;
+     padding-left: 1rem;
+     padding-right: 1rem;
+     vertical-align: middle;
+     color: white;
+     font-size: 0.625rem;
+     letter-spacing: 0.05rem;
+     font-weight: 700;
+     text-transform: uppercase;
      text-decoration: none;
      cursor: pointer;
  }
@@ -65,7 +85,6 @@ html {
      height: 100%;
      padding-left: 1rem;
      padding-right: 1rem;
-     /* #4 */
      vertical-align: middle;
      color: white;
      font-size: 0.8rem;
@@ -74,19 +93,18 @@ html {
      /* #3 */
      text-decoration: none;
      cursor: pointer;
-    
+
     text-shadow: 1px 1px 0px rgb(58,23,63);
 }
 
 .icon{
     padding-left: .3em;
 }
-   /* #5 */
- .links-container .navbar-link:hover {
+ .main-page-links-container .main-page-navbar-link:hover {
      color: rgb(233,50,117);
  }
 
-.navbar-link:active{
+.main-page-navbar-link:active{
      background-color:white;
 }
  .container {
@@ -97,19 +115,73 @@ html {
 .container.narrow {
      max-width: 56rem;
  }
- 
-/* Medium and small screens (640px) */
- @media (min-width: 640px) 
- {
-   html { font-size: 112%; }
-     /* Style information will go here */
+
+
+.navbar {
+    position: relative;
+     padding: 1.5rem;
+     background-color: #F99186;
+     z-index: 1;
+    height: 70px;
+
+}
+
+#
+
+.navbar .logo {
+    position: relative;
+    left: 2rem;
+    cursor: pointer;  
  }
  
- /* Large screens (1024px) */
+ .navbar .links-container {
+     display: table;
+     position: absolute;
+     top: 0;
+     right: 0;
+     height: 70px;
+     color: white;
+
+     text-decoration: none;
+ }
+ 
+ .links-container .navbar-link {
+     display: table-cell;
+     position: relative;
+     height: 100%;
+     padding-left: 1rem;
+     padding-right: 1rem;
+
+     vertical-align: middle;
+     color: white;
+     font-size: 0.625rem;
+     letter-spacing: 0.05rem;
+     font-weight: 700;
+     text-transform: uppercase;
+     text-decoration: none;
+     cursor: pointer;
+ }
+ 
+
+ .links-container .navbar-link:hover {
+     color: rgb(233,50,117);
+ }
+
+.navbar-link:active{
+     background-color:white;
+}
+
+ @media (min-width: 640px)
+ {
+   html { font-size: 112%; }
+
+ }
+
+
  @media (min-width: 1024px) {
    html { font-size: 120%; }
-     /* Style information will go here */
- 
+
+
   .column {
          float: left;
          padding-left: 1rem;
@@ -121,7 +193,7 @@ html {
      .column.half { width: 50%; }
      .column.third { width: 33.3%; }
      .column.fourth { width: 25%; }
-     .column.flow-opposite { float: right; }  
+     .column.flow-opposite { float: right; }
 }
 .clearfix::before,
 .clearfix::after {
